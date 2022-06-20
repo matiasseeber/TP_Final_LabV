@@ -1,0 +1,9 @@
+body{
+    background-image: url("/img/top-view-books-with-copy-space.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.formBackground{
+    background-color: white;
+}
