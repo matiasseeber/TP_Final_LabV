@@ -5,13 +5,17 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Home</title>
+
+    <link rel="stylesheet" href="/css/colors.css">
+    <link rel="stylesheet" type="text/css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-    <link rel="stylesheet" href="/css/colors.css">
-    <link rel="stylesheet" type="text/css"
-    href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.css%22%3E" />
+    <link rel="stylesheet" href="//cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="/css/tables.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="//cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
     <script type="text/javascript">
-        $(document).ready(function() {
+        $(document).ready(function () {
             $('#table').DataTable();
         });
     </script>
@@ -36,25 +40,29 @@
                     <li class="nav-item">
                         <a class="nav-link" href="clientes.html">Clientes</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="micuenta.html">Mi cuenta</a>
-                    </li>
+                    <!-- <a href="login.html" class="nav-link ps-3 pe-3">Iniciar sesion</a> -->
                 </ul>
             </div>
             <div class="d-flex justify-content-center align-items-center flex-row ps-3 pe-3">
-                <a href="login.html" class="nav-link ps-3 pe-3">Iniciar sesion</a>
-                <a href="registrarse.html" class="nav-link ps-3 pe-3">Registrarse</a>
+                <!-- <a href="login.html" class="nav-link ps-3 pe-3">Iniciar sesion</a> -->
+                <!-- <a href="registrarse.html" class="nav-link ps-3 pe-3">Registrarse</a> -->
                 <p class="ps-3 pe-3 mb-0">Nombre usuario</p>
             </div>
         </nav>
     </header>
     <main class="d-flex flex-column justify-content-center align-items-center p-5 w-100">
-        <form class="d-flex flex-row rounded shadow bg-white rounded w-50 mb-5 mt-5 p-3 flex-wrap justify-content-center">
+        <form
+            class="d-flex flex-row rounded shadow bg-white rounded w-50 mb-5 mt-5 p-3 flex-wrap justify-content-center">
             <h1>Añadir Libro</h1>
             <div class="w-100 d-flex flex-row">
                 <div class="m-3 w-50">
-                    <label for="dni" class="form-label">ISBN</label>
-                    <input type="number" class="form-control" id="dni" name="dni" aria-describedby="emailHelp">
+                    <label for="Biblioteca" class="form-label">Biblioteca</label>
+                    <select class="form-select" aria-label="Default select example" id="Biblioteca" name="Biblioteca">
+                        <option value="Hombre">Llenar con bd</option>
+                        <option value="Hombre">Llenar con bd</option>
+                        <option value="Hombre">Llenar con bd</option>
+                        <option value="Hombre">Llenar con bd</option>
+                    </select>
                 </div>
                 <div class="m-3 w-50">
                     <label for="name" class="form-label">Titulo</label>
@@ -116,76 +124,80 @@
                 <textarea name="Description" id="" cols="30" rows="10" class="w-100"></textarea>
             </div>
 
-            
+
             <div class="w-100 d-flex flex-row justify-content-center align-content-center pt-3">
                 <button type="submit" class="btn btn-primary" id="submit" name="submit">Añadir libro</button>
             </div>
         </form>
-        <table class="table table-light text-center text-black" id="table">
-            <thead class="">
-                <tr>
-                    <th>Biblioteca</th>
-                    <th>Isbn</th>
-                    <th>Titulo</th>
-                    <th>Fecha de alta</th>
-                    <th>Fecha de lanzamiento</th>
-                    <th>Idioma</th>
-                    <th>Cantidad de paginas</th>
-                    <th>Autor</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td class="p-3">1</td>
-                    <td class="p-3">1</td>
-                    <td class="p-3">Titulo libro</td>
-                    <td class="p-3">01/01/2000</td>
-                    <td class="p-3">01/01/2000</td>
-                    <td class="p-3">Español</td>
-                    <td class="p-3">200</td>
-                    <td class="p-3">Yo</td>
-                </tr>
-                <tr>
-                    <td class="p-3">1</td>
-                    <td class="p-3">1</td>
-                    <td class="p-3">Titulo libro</td>
-                    <td class="p-3">01/01/2000</td>
-                    <td class="p-3">01/01/2000</td>
-                    <td class="p-3">Español</td>
-                    <td class="p-3">200</td>
-                    <td class="p-3">Yo</td>
-                </tr>
-                <tr>
-                    <td class="p-3">1</td>
-                    <td class="p-3">1</td>
-                    <td class="p-3">Titulo libro</td>
-                    <td class="p-3">01/01/2000</td>
-                    <td class="p-3">01/01/2000</td>
-                    <td class="p-3">Español</td>
-                    <td class="p-3">200</td>
-                    <td class="p-3">Yo</td>
-                </tr>
-                <tr>
-                    <td class="p-3">1</td>
-                    <td class="p-3">1</td>
-                    <td class="p-3">Titulo libro</td>
-                    <td class="p-3">01/01/2000</td>
-                    <td class="p-3">01/01/2000</td>
-                    <td class="p-3">Español</td>
-                    <td class="p-3">200</td>
-                    <td class="p-3">Yo</td>
-                </tr>
-            </tbody>
-        </table>
+        <div style="background-color: white;" class="d-flex justify-content-center align-items-center">
+            <table class="tableCss" id="table">
+                <thead class="">
+                    <tr>
+                        <th>Biblioteca</th>
+                        <th>Isbn</th>
+                        <th>Titulo</th>
+                        <th>Fecha de alta</th>
+                        <th>Fecha de lanzamiento</th>
+                        <th>Idioma</th>
+                        <th>Cantidad de paginas</th>
+                        <th>Autor</th>
+                        <th>Estado</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <form action="">
+                            <td class="p-3">
+                                <select class="form-select" aria-label="Default select example" id="Biblioteca"
+                                    name="Biblioteca">
+                                    <option value="Hombre">Llenar con bd</option>
+                                    <option value="Hombre">Llenar con bd</option>
+                                    <option value="Hombre">Llenar con bd</option>
+                                    <option value="Hombre">Llenar con bd</option>
+                                </select>
+                            </td>
+                            <td class="p-3">1</td>
+                            <td class="p-3"><input type="text" name="title" id="title" value="Titulo libro"></td>
+                            <td class="p-3">01/01/2000</td>
+                            <td class="p-3">01/01/2000</td>
+                            <td class="p-3">Español</td>
+                            <td class="p-3">200</td>
+                            <td class="p-3">Yo</td>
+                            <td class="p-3">Prestado</td>
+                            <td class="p-3"><button type="modify" class="btn btn-primary" id="submit"
+                                    name="modify">Modificar</button><button type="submit" class="btn btn-primary ms-3"
+                                    id="delete" name="delete">Eliminar</button></td>
+                        </form>
+                    </tr>
+                    <tr>
+                        <form action="">
+                            <td class="p-3">
+                                <select class="form-select" aria-label="Default select example" id="Biblioteca"
+                                    name="Biblioteca">
+                                    <option value="Hombre">Llenar con bd</option>
+                                    <option value="Hombre">Llenar con bd</option>
+                                    <option value="Hombre">Llenar con bd</option>
+                                    <option value="Hombre">Llenar con bd</option>
+                                </select>
+                            </td>
+                            <td class="p-3">1</td>
+                            <td class="p-3"><input type="text" name="title" id="title" value="Titulo libro"></td>
+                            <td class="p-3">01/01/2000</td>
+                            <td class="p-3">01/01/2000</td>
+                            <td class="p-3">Español</td>
+                            <td class="p-3">200</td>
+                            <td class="p-3">Yo</td>
+                            <td class="p-3">Prestado</td>
+                            <td class="p-3"><button type="modify" class="btn btn-primary" id="submit"
+                                    name="modify">Modificar</button><button type="submit" class="btn btn-primary ms-3"
+                                    id="delete" name="delete">Eliminar</button></td>
+                        </form>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </main>
-    </body>
+</body>
+
 </html>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
-    crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
-    integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
-    crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js"
-    integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy"
-    crossorigin="anonymous"></script>
